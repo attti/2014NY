@@ -88,9 +88,9 @@ public class OHDashboardActivity extends Activity {
 		Date now = new Date();
 		Map dateUpdate = OHTimeUtil.instance().getDateUpdate(now);
 		if (dateUpdate.containsKey(EventType.EVENT_ON))
-			toastMsg = "The OHNY is on, day "+dateUpdate.get(EventType.EVENT_ON);
+			toastMsg = "OHNY Day "+dateUpdate.get(EventType.EVENT_ON);
 		else if (dateUpdate.containsKey(EventType.EVENT_COMING)) {
-			toastMsg = "The OHNY is coming in %d day(s).";
+			toastMsg = "OHNY is coming in %d day(s).";
 			toastMsg = String.format(toastMsg, dateUpdate.get(EventType.EVENT_COMING));
 		}
 		else if (dateUpdate.containsKey(EventType.EVENT_PASSED))

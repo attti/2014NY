@@ -8,8 +8,8 @@ import android.util.Log;
 import com.mobi.app.ohny.util.OHEvent.EventType;
 
 public class OHTimeUtil {
-	private final String dayStartEpicTime = "1404002698";
-	private final String dayEndEpicTime = "1404175497";
+	private final String dayStartEpicTime = "1403913600";
+	private final String dayEndEpicTime = "1404172800";
 	private final int MILLISEC_IN_A_DAY = 1000 * 3600 * 24;
 	private Date dayStart;
 	private Date dayEnd;
@@ -39,7 +39,7 @@ public class OHTimeUtil {
 			dateDiff = date.getTime() - dayEnd.getTime();
 			dateDiff /= MILLISEC_IN_A_DAY;
 			ret.put(EventType.EVENT_PASSED, dateDiff.intValue());
-		} else if (date.getDate() == dayStart.getDate()) {
+		} else {
 			dateDiff = date.getTime() - dayStart.getTime();
 			dateDiff /= MILLISEC_IN_A_DAY; 
 			dateDiff += 1;
